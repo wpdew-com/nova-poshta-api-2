@@ -515,6 +515,18 @@ class NovaPoshtaApi2 {
 				'info' => array(),
 		));
 	}
+
+	/**
+	 * Get all cities
+	 * 
+	 * @param int $name
+	 * @return mixed
+	 */
+	function getAllCity($name = 0) {
+		return $this->request('Address', 'searchSettlements', array(
+			'CityName' => $name,
+		));
+	}
 	
 	/**
 	 * Magic method of calling functions (uses for calling Common Model of NovaPoshta API)
